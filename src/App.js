@@ -9,6 +9,9 @@ import LandingPage from 'pages/LandingPage';
 import ProjectPage from 'pages/ProjectPage';
 import NotFoundPage from 'pages/NotFoundPage';
 import TeamPage from 'pages/TeamPage';
+import AboutUsPage from 'pages/AboutUsPage';
+import ContactUsPage from 'pages/ContactUsPage';
+import VirtualTryOnPage from 'pages/VirtualTryOnPage';
 
 import { ProjectDetailPage } from 'pages/ProjectDetailPage';
 import { DiscussProjectPage } from 'pages/DiscussProjectPage';
@@ -23,6 +26,9 @@ function App() {
         <Route path="/project" element={<ProjectPage />} />
         <Route exact path="/project/:id" element={<ProjectDetailPage />} />
         <Route exact path="/team" element={<TeamPage />} />
+        <Route exact path="/about" element={<AboutUsPage />} />
+        <Route exact path="/contact" element={<ContactUsPage />} />
+        <Route exact path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route exact path="/discuss-project" element={<DiscussProjectPage />} />
         <Route path="**" element={<NotFoundPage />} />
       </Routes>

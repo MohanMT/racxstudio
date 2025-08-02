@@ -21,12 +21,12 @@ import 'swiper/css/pagination';
 
 export default function Testimonial({ data }) {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto px-5 py-20">
       <Fade direction="up">
-        <h1 className="text-5xl text-theme-blue text-center font-bold">Testimonials</h1>
+        <h1 className="text-5xl text-primary text-center font-bold">Testimonials</h1>
       </Fade>
       <Fade direction="up" delay={500}>
-        <p className="font-light text-lg text-gray-400 text-center mb-3 sm:mb-3 xl:mb-4">
+        <p className="font-light text-lg text-text-light text-center mb-3 sm:mb-3 xl:mb-4">
           What they said about us.
         </p>
       </Fade>
@@ -40,15 +40,15 @@ export default function Testimonial({ data }) {
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="flex-col xl:w-full rounded-2xl shadow-xl sm:shadow-2xl border px-8 py-6 mx-2 mb-6 mt-6 xl:mx-auto sm:mx-6 sm:mb-12">
+            <div className="bg-background rounded-2xl shadow-xl border border-accent/20 p-8 mx-4 my-6 max-w-4xl mx-auto">
               <div className="flex items-center mb-5">
                 <img src={item.imageUrl} alt="Testimoni" className="w-20 h-20 rounded-full" />
                 <div className="flex-col pl-5">
-                  <h2 className="text-theme-blue text-2xl">{item.name}</h2>
-                  <p className="font-light text-gray-400">{item.company}</p>
+                  <h2 className="text-primary text-2xl">{item.name}</h2>
+                  <p className="font-light text-text-light">{item.company}</p>
                 </div>
               </div>
-              <p className="font-light text-2xl text-gray-400 pl-5 pt-3 pb-1">
+              <p className="font-light text-2xl text-text-dark pl-5 pt-3 pb-1">
                 {item.testimoni}
               </p>
             </div>

@@ -23,7 +23,7 @@ export default function Header() {
       <div className="flex justify-between px-4 lg:px-0">
         <BrandIcon />
 
-        <button className="block text-theme-blue lg:hidden focus:outline-none" onClick={() => setIsCollapse(!isCollapse)}>
+        <button className="block text-primary lg:hidden focus:outline-none" onClick={() => setIsCollapse(!isCollapse)}>
           <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path className={`${isCollapse ? 'hidden' : 'block'}`} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
             <path className={`${!isCollapse ? 'hidden' : 'block'}`} strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -31,7 +31,7 @@ export default function Header() {
         </button>
       </div>
 
-      <ul className="hidden text-theme-blue tracking-widest items-center lg:flex flex-row mt-0">
+      <ul className="hidden text-primary tracking-widest items-center lg:flex flex-row mt-0">
         <li>
           <Button
             className={`${path === '/' ? 'active-link' : ''} font-medium text-lg px-5 no-underline hover:underline`}
@@ -59,11 +59,21 @@ export default function Header() {
             Project
           </Button>
         </li>
+        <li className="py-2 lg:py-0">
+          <Button
+            className={`${path === '/about' ? 'active-link' : ''} font-medium text-lg px-5 no-underline hover:underline`}
+            type="link"
+            href="/about"
+          >
+            About Us
+          </Button>
+        </li>
+      
         <li>
           <Button
-            className="font-medium text-lg mx-auto ml-3 px-6 py-2 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200"
+            className="font-medium text-lg mx-auto ml-3 px-6 py-2 bg-accent text-white rounded-full border-2 border-accent hover:bg-primary transition duration-200"
             type="link"
-            href="/discuss-project"
+            href="/contact"
           >
             Discuss Project
           </Button>
@@ -82,8 +92,8 @@ export default function Header() {
         <div className="transition duration-300 ease-in data-[closed]:opacity-0">
 
           {/* <Fade> */}
-          <ul className="z-50 flex flex-col text-theme-blue tracking-widest my-6 absolute bg-white w-full border-b-2 border-gray-300 lg:hidden">
-            <li className="py-2 bg-white">
+          <ul className="z-50 flex flex-col text-primary tracking-widest my-6 absolute bg-background w-full border-b-2 border-text-light lg:hidden">
+            <li className="py-2 bg-background">
               <Button
                 className={`${path === '/' ? 'active-link' : ''} font-medium px-10 no-underline hover:underline`}
                 type="link"
@@ -92,7 +102,7 @@ export default function Header() {
                 Home
               </Button>
             </li>
-            <li className="py-2 bg-white">
+            <li className="py-2 bg-background">
               <Button
                 className={`${path === '/team' ? 'active-link' : ''} font-medium px-10 no-underline hover:underline`}
                 type="link"
@@ -101,7 +111,7 @@ export default function Header() {
                 Team
               </Button>
             </li>
-            <li className="py-2 bg-white">
+            <li className="py-2 bg-background">
               <Button
                 className={`${path === '/project' ? 'active-link' : ''} font-medium px-10 no-underline hover:underline`}
                 type="link"
@@ -110,9 +120,27 @@ export default function Header() {
                 Project
               </Button>
             </li>
-            <li className="mx-auto my-9 bg-white">
+            <li className="py-2 bg-background">
               <Button
-                className="font-bold mx-auto px-5 py-2 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200"
+                className={`${path === '/about' ? 'active-link' : ''} font-medium px-10 no-underline hover:underline`}
+                type="link"
+                href="/about"
+              >
+                About Us
+              </Button>
+            </li>
+            <li className="py-2 bg-background">
+              <Button
+                className={`${path === '/contact' ? 'active-link' : ''} font-medium px-10 no-underline hover:underline`}
+                type="link"
+                href="/contact"
+              >
+                Contact Us
+              </Button>
+            </li>
+            <li className="mx-auto my-9 bg-background">
+              <Button
+                className="font-bold mx-auto px-5 py-2 bg-accent text-white rounded-full border-2 border-accent hover:bg-primary transition duration-200"
                 type="link"
                 href="/discuss-project"
               >

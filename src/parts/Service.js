@@ -9,26 +9,30 @@ import { Fade } from 'react-awesome-reveal';
 
 export default function Service({ data }) {
   return (
-    <div className="bg-gray-50">
-      <div className="container mx-auto pt-20 pb-28">
+    <div className="bg-text-light/10 py-20">
+      <div className="container mx-auto px-5">
         <Fade direction="right" triggerOnce>
-          <h1 className="text-5xl text-theme-blue text-center font-bold">Our Service</h1>
+          <h1 className="text-5xl text-primary text-center font-bold">Our Services</h1>
         </Fade>
         <Fade direction="left" triggerOnce>
-          <p className="font-light text-lg text-gray-400 text-center mb-12">
-            We are ready to scale up your business with our great service.
+          <p className="font-light text-lg text-text-light text-center mb-12">
+            From custom mobile applications to targeted social media campaigns,
+            {' '}
+            we deliver cutting-edge digital solutions that help businesses connect
+            {' '}
+            with their audience and achieve measurable results.
           </p>
         </Fade>
 
-        <div className="grid grid-rows-3 px-10 gap-8 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 xl:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {
             data.map((item, index) => (
               // eslint-disable-next-line react/no-array-index-key
               <Fade direction={item.animation} delay={500 * index} key={index} triggerOnce>
                 <div>
-                  <div className="bg-white group rounded-2xl shadow-2xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
+                  <div className="bg-background group rounded-2xl shadow-2xl border border-accent/20 transform transition duration-500 hover:scale-105">
                     <img src={item.imageUrl} alt="Service" className="w-full rounded-t-2xl" />
-                    <h2 className="text-theme-blue text-center text-xl py-7 rounded-b-2xl">{item.title}</h2>
+                    <h2 className="text-primary text-center text-xl py-7 rounded-b-2xl">{item.title}</h2>
                   </div>
                 </div>
               </Fade>
