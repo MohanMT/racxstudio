@@ -8,7 +8,7 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
     './public/index.html',
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, // Can be 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -31,12 +31,18 @@ module.exports = {
         '7xl': '5rem',
       },
 
+      // 🔵 Primary (Navy Blue #0A2540)
+      // 🟠 Accent (Orange #FF6B00)
+      // ⚫ Dark Grey Text (#374151)
+      // ⚪ Light Grey (#9CA3AF)
+      // ⚪ Background (#FFFFFF / Light Grey sections)
+
       colors: {
-        primary: '#4A00E0',         // Royal Purple
-        accent: '#FF3C38',          // Coral Red-Orange
-        background: '#F9FAFB',      // Light Gray-White
-        'text-dark': '#1E1E2F',     // Deep Charcoal
-        'text-light': '#9CA3AF',    // Cool Gray
+        primary: '#0A2540',         // Primary – nav, header, footer, etc.
+        accent: '#FF6B00',          // Accent – CTA buttons, icons, hover
+        background: '#FFFFFF',      // Main background for cards, sections
+        'text-dark': '#374151',     // Paragraph, descriptions
+        'text-light': '#9CA3AF',    // Placeholder text, disabled states
       },
 
       spacing: {
