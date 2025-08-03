@@ -29,7 +29,7 @@ export default function Portfolio({ data }) {
           data.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <Fade direction="up" triggerOnce bottom delay={500 * index} key={index}>
-              <Button type="link" href={item.id === 'virtual-try-on' ? '/virtual-try-on' : `/${item.id}`}>
+              <Button type="link" href={['virtual-try-on', 'snapchat-lens', 'ecommerce-app', 'brand-website'].includes(item.id) ? `/${item.id}` : `/project/${item.id}`}>
                 <div className="group rounded-2xl shadow-xl w-full max-w-sm transform transition duration-500 hover:scale-105 portofolio-card">
                   <div className="relative">
                     <img src={item.imageUrl} alt="Portfolio" className="rounded-t-2xl z-0" />
@@ -45,9 +45,9 @@ export default function Portfolio({ data }) {
                   <div className="py-4">
                     <h2 className="text-primary text-center text-xl">{item.title}</h2>
                     <p className="font-light text-text-light text-center">{item.type}</p>
-                    {item.id === 'virtual-try-on' && (
+                    {['virtual-try-on', 'snapchat-lens', 'ecommerce-app', 'brand-website'].includes(item.id) && (
                       <p className="text-accent text-center text-sm mt-2 font-medium">
-                        View Detailed Breakdown →
+                        View Project Details →
                       </p>
                     )}
                   </div>

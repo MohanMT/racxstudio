@@ -71,7 +71,7 @@ export const Portfolios = [
     credit: '/virtual-try-on',
   },
   {
-    id: 'asd1293uhjkhkjh2',
+    id: 'snapchat-lens',
     title: 'Snapchat Lens Creator',
     imageUrl: Stream,
     type: 'AR Filter',
@@ -79,10 +79,10 @@ export const Portfolios = [
       'Lens Development',
       'Creative Design',
     ],
-    credit: 'https://dribbble.com/shots/15276430-Stream',
+    credit: '/snapchat-lens',
   },
   {
-    id: 'asd1293uvbvcbbd3',
+    id: 'ecommerce-app',
     title: 'E-Commerce Mobile App',
     imageUrl: Freelance,
     type: 'Mobile App',
@@ -90,11 +90,11 @@ export const Portfolios = [
       'Mobile Development',
       'Payment Integration',
     ],
-    credit: 'https://dribbble.com/shots/15223131-Freelance-Mobile-App-Concept',
+    credit: '/ecommerce-app',
   },
 
   {
-    id: 'asd1293ufgdfgs4',
+    id: 'brand-website',
     title: 'Brand Website & Social Ads',
     imageUrl: Aura,
     type: 'Website + Marketing',
@@ -102,7 +102,7 @@ export const Portfolios = [
       'Web Development',
       'Facebook Ads Campaign',
     ],
-    credit: 'https://dribbble.com/shots/15176338-Aura-Website-Main-Page',
+    credit: '/brand-website',
   },
   // {
   //   id: 'asd1293ulskmnb5',
