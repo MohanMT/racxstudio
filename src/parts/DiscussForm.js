@@ -10,10 +10,6 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as emailjs from '@emailjs/browser';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { ToastContainer, toast } from 'react-toastify';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import 'react-toastify/dist/ReactToastify.css';
 
 import { Form } from 'elements/Form';
 import Button from 'elements/Button';
@@ -45,13 +41,13 @@ export const DiscussForm = (actions) => {
         'user_csqIxzN5mKsl1yw4ffJzV',
       )
         .then(() => {
-          toast.success('Success! we\'\ll get back to you soon. Thank you!');
+          alert('Success! we\'ll get back to you soon. Thank you!');
           resetForm();
         }, (error) => {
-          toast.error(error);
+          alert(`Error: ${error.text}`);
         });
     } else {
-      toast.error('Please fill out the blank form.');
+      alert('Please fill out the blank form.');
     }
   };
 
@@ -133,8 +129,6 @@ export const DiscussForm = (actions) => {
           </Button>
         </div>
       </Fade>
-
-      <ToastContainer />
 
     </section>
   );

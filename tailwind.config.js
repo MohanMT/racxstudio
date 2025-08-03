@@ -8,12 +8,13 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
     './public/index.html',
   ],
-  darkMode: false, // Can be 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
         sans: ['Poppins', ...fontFamily.sans],
       },
+
       fontSize: {
         xs: '0.75rem',
         sm: '0.875rem',
@@ -31,18 +32,12 @@ module.exports = {
         '7xl': '5rem',
       },
 
-      // 🔵 Primary (Navy Blue #0A2540)
-      // 🟠 Accent (Orange #FF6B00)
-      // ⚫ Dark Grey Text (#374151)
-      // ⚪ Light Grey (#9CA3AF)
-      // ⚪ Background (#FFFFFF / Light Grey sections)
-
       colors: {
-        primary: '#0A2540',         // Primary – nav, header, footer, etc.
-        accent: '#FF6B00',          // Accent – CTA buttons, icons, hover
-        background: '#FFFFFF',      // Main background for cards, sections
-        'text-dark': '#374151',     // Paragraph, descriptions
-        'text-light': '#9CA3AF',    // Placeholder text, disabled states
+        primary: '#2E2E2E',         // Asphalt Grey
+        accent: '#39FF14',          // Neon Green
+        background: '#B0B0B0',      // Steel
+        'text-dark': '#2E2E2E',
+        'text-light': '#ffffff',
       },
 
       spacing: {
