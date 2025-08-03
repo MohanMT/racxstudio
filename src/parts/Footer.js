@@ -26,7 +26,7 @@ export default function Footer() {
               Office
             </h1>
             <p className="text-lg text-text-light font-light">
-              mohanmamidala2004@gmail.com
+             wartechsolutionz@gmail.com
             </p>
             <p className="text-lg text-text-light font-light">
               Padmanagar, Bhiwandi, Thane

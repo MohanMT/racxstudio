@@ -15,7 +15,7 @@ export default function AllPortfolio({ data }) {
       <section className="container mx-auto px-5 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl text-primary font-bold mb-6">All Projects</h1>
-          <p className="text-lg text-text-light">
+          <p className="text-lg text-text-dark">
             Explore our complete portfolio of innovative digital solutions
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function AllPortfolio({ data }) {
                     </div>
                     <div className="py-4">
                       <h2 className="text-primary text-center text-xl font-semibold">{item.title}</h2>
-                      <p className="font-light text-text-light text-center">{item.type}</p>
+                      <p className="font-light text-text-dark text-center">{item.type}</p>
                       {['virtual-try-on', 'snapchat-lens', 'ecommerce-app', 'brand-website'].includes(item.id) && (
                         <p className="text-accent text-center text-sm mt-2 font-medium">
                           View Project Details →

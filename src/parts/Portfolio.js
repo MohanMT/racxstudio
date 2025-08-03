@@ -44,7 +44,7 @@ export default function Portfolio({ data }) {
                   </div>
                   <div className="py-4">
                     <h2 className="text-primary text-center text-xl">{item.title}</h2>
-                    <p className="font-light text-text-light text-center">{item.type}</p>
+                    <p className="font-light text-text-dark text-center">{item.type}</p>
                     {['virtual-try-on', 'snapchat-lens', 'ecommerce-app', 'brand-website'].includes(item.id) && (
                       <p className="text-accent text-center text-sm mt-2 font-medium">
                         View Project Details →
