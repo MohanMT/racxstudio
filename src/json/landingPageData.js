@@ -26,12 +26,12 @@ import Reiner from '../assets/images/Testimonials/Reiner.jpg';
 import Kruger from '../assets/images/Testimonials/Kruger.jpg';
 
 // TeamMembers
-import CEO from '../assets/images/TeamMembers/CEO.jpg';
+import CEO from '../assets/images/TeamMembers/profile.jpg';
 import HRD from '../assets/images/TeamMembers/HRD.jpg';
 import Finance from '../assets/images/TeamMembers/Finance.jpg';
 import ProjectManager from '../assets/images/TeamMembers/Project-manager.jpg';
-import Frontend1 from '../assets/images/TeamMembers/Frontend1.jpg';
-import Frontend2 from '../assets/images/TeamMembers/Frontend2.jpg';
+// import Frontend1 from '../assets/images/TeamMembers/Frontend1.jpg';
+// import Frontend2 from '../assets/images/TeamMembers/Frontend2.jpg';
 // import Backend1 from '../assets/images/TeamMembers/Backend1.jpg';
 // import Backend2 from '../assets/images/TeamMembers/Backend2.jpg';
 // import Mobile1 from '../assets/images/TeamMembers/Mobile1.jpg';
@@ -188,22 +188,22 @@ export const TeamMembers = [
   },
   {
     name: 'Granger Watterson',
-    position: 'Finance',
+    position: 'UI UX Designer',
     imageUrl: Finance,
   },
   {
     name: 'Tom Jimmy',
-    position: 'Project Manager',
+    position: 'Backend Developer',
     imageUrl: ProjectManager,
   },
-  {
-    name: 'Jim Hendrix',
-    position: 'Front-end Developer',
-    imageUrl: Frontend1,
-  },
-  {
-    name: 'Calvin Max',
-    position: 'Front-end Developer',
-    imageUrl: Frontend2,
-  },
+  // {
+  //   name: 'Jim Hendrix',
+  //   position: 'Front-end Developer',
+  //   imageUrl: Frontend1,
+  // },
+  // {
+  //   name: 'Calvin Max',
+  //   position: 'Front-end Developer',
+  //   imageUrl: Frontend2,
+  // },
 ];
