@@ -7,7 +7,6 @@ import UIUX from '../assets/images/Services/social.jpg';
 // images.jpg
 
 // Portfolio Img Imports
-import Recruiting from '../assets/images/Portfolio/tryon.jpg';
 import Stream from '../assets/images/Portfolio/creator.png';
 import Freelance from '../assets/images/Portfolio/ecom.png';
 import Aura from '../assets/images/Portfolio/Aura.png';
@@ -61,7 +60,7 @@ export const Portfolios = [
   {
     id: 'virtual-try-on',
     title: 'Virtual Try-On (AR)',
-    imageUrl: Recruiting,
+    imageUrl: Aura,
     type: 'AR Experience',
     responsibility: [
       'AR Development',

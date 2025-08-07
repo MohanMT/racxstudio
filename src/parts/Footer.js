@@ -12,13 +12,10 @@ export default function Footer() {
     <div className="bg-text-dark/10 border-t border-text-dark pb-6">
       <div className="container flex-col mx-auto ">
         <div className="flex flex-col sm:flex-row mt-8 justify-center">
-          <div className="w-1/3 flex-col ml-16 mr-8">
+          <div className="w-1/3 flex ml-16 mr-8">
             <BrandIcon />
             <p className="w-full text-lg text-text-dark font-light">
-              Creating Digital Experiences
-              {' '}
-              <br />
-              That Drive Results
+              Creating Digital Experiences That Drive Results
             </p>
           </div>
           <div className="w-1/3 mt-0 ml-16 mr-0 sm:ml-0 sm:mr-5">
@@ -29,7 +26,7 @@ export default function Footer() {
              wartechsolutionz@gmail.com
             </p>
             <p className="text-lg text-text-dark font-light">
-              Padmanagar, Bhiwandi, Thane
+              Near Kailsh Grain,Gaytri Nagar,Padmanagar, Bhiwandi, Thane
             </p>
           </div>
           <div className="w-1/3 ml-16 sm:ml-0 mt-0">
