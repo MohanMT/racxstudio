@@ -129,7 +129,7 @@ export default function ContactUs() {
                     LinkedIn
                   </Button>
                   <Button 
-                    href="https://github.com/waretech" 
+                    href="https://github.com/MohanMT" 
                     type="link" 
                     target="_blank" 
                     className="bg-accent hover:bg-background hover:text-primary text-white px-4 py-2 rounded-lg transition duration-200"

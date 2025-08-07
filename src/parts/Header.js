@@ -75,7 +75,7 @@ export default function Header() {
             type="link"
             href="/contact"
           >
-            Discuss Project
+            Contact Us
           </Button>
         </li>
       </ul>

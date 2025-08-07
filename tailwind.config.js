@@ -44,7 +44,7 @@ module.exports = {
         accent: '#FF6B00',          // Accent – CTA buttons, icons, hover
         background: '#FFFFFF',      // Main background for cards, sections
         'text-dark': '#374151',     // Paragraph, descriptions
-        'text-light': '#9CA3AF',    // Placeholder text, disabled states
+        'text-light': '#000000',    // Placeholder text, disabled states
       },
 
 

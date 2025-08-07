@@ -25,7 +25,7 @@ export default function AllPortfolio({ data }) {
             data.map((item, index) => (
               <Fade triggerOnce direction="up" delay={200 * index} key={index}>
                 <Button type="link" href={['virtual-try-on', 'snapchat-lens', 'ecommerce-app', 'brand-website'].includes(item.id) ? `/${item.id}` : `/project/${item.id}`}>
-                  <div className="group rounded-2xl shadow-xl w-full max-w-sm transform transition duration-500 hover:scale-105 portofolio-card">
+                  <div className="group rounded-2xl shadow-2xl w-full max-w-sm transform transition duration-500 hover:scale-105 portofolio-card">
                     <div className="relative">
                       <img src={item.imageUrl} alt="Portfolio" className="rounded-t-2xl z-0 w-full h-48 object-cover" />
                       <div className="absolute flex w-full h-full top-0 opacity-0 bg-black justify-center rounded-t-2xl rounded-b img-hover">

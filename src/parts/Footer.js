@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="bg-text-dark/10 border-t border-text-dark pb-6">
       <div className="container flex-col mx-auto ">
         <div className="flex flex-col sm:flex-row mt-8 justify-center">
-          <div className="w-1/3 flex ml-16 mr-8">
+          <div className="flex flex-col w-1/3 flex ml-16 mr-8">
             <BrandIcon />
             <p className="w-full text-lg text-text-dark font-light">
               Creating Digital Experiences That Drive Results

@@ -9,8 +9,8 @@ import UIUX from '../assets/images/Services/social.jpg';
 // Portfolio Img Imports
 import Stream from '../assets/images/Portfolio/creator.png';
 import Freelance from '../assets/images/Portfolio/ecom.png';
-import Aura from '../assets/images/Portfolio/Aura.png';
-// import Surtido from '../assets/images/Portfolio/Surtido.png';
+import Aura from '../assets/images/Portfolio/tryon.jpg';
+import Surtido from '../assets/images/Portfolio/Surtido.png';
 // import ManagementApp from '../assets/images/Portfolio/ManagementApp.png';
 
 // Advantages
@@ -95,7 +95,7 @@ export const Portfolios = [
   {
     id: 'brand-website',
     title: 'Brand Website & Social Ads',
-    imageUrl: Aura,
+    imageUrl: Surtido,
     type: 'Website + Marketing',
     responsibility: [
       'Web Development',
@@ -155,21 +155,21 @@ export const Testimonials = [
     id: 1,
     name: 'Sasha Rose',
     company: 'Owner, Surveyor Corps',
-    testimoni: 'Thanks for Racxstudio, you guys are the best! Keep up the great work!',
+    testimoni: 'Thanks for WareTech, you guys are the best! Keep up the great work!',
     imageUrl: Sasha,
   },
   {
     id: 2,
     name: 'Kruger Khan',
     company: 'Director, Shultan Oil',
-    testimoni: 'I just wanted to let you know that it’s been great working with Racxstudio.',
+    testimoni: 'I just wanted to let you know that it’s been great working with WareTech.',
     imageUrl: Kruger,
   },
   {
     id: 3,
     name: 'Reiner John',
     company: 'CEO, Marley CO',
-    testimoni: 'Racxstudio is so great. Thank you so much for a job well done.',
+    testimoni: 'WareTech is so great. Thank you so much for a job well done.',
     imageUrl: Reiner,
   },
 ];
