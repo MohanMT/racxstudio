@@ -1,34 +1,34 @@
 /* eslint-disable import/extensions */
 
 // Services Img Imports
-import Web from '../assets/images/Services/website.jpg';
-import Mobile from '../assets/images/Services/Web.png';
-import UIUX from '../assets/images/Services/social.jpg';
+import Web from "../assets/images/Services/website.jpg";
+import Mobile from "../assets/images/Services/Web.png";
+import UIUX from "../assets/images/Services/social.jpg";
 // images.jpg
 
 // Portfolio Img Imports
-import Stream from '../assets/images/Portfolio/creator.png';
-import Freelance from '../assets/images/Portfolio/ecom.png';
-import Aura from '../assets/images/Portfolio/tryon.jpg';
-import Surtido from '../assets/images/Portfolio/Surtido.png';
+import Stream from "../assets/images/Portfolio/creator.png";
+import Freelance from "../assets/images/Portfolio/ecom.png";
+import Aura from "../assets/images/Portfolio/tryon.jpg";
+import Surtido from "../assets/images/Portfolio/Surtido.png";
 // import ManagementApp from '../assets/images/Portfolio/ManagementApp.png';
 
 // Advantages
-import Communicative from '../assets/images/Advantages/Communicative.png';
-import Collaborative from '../assets/images/Advantages/Collaborative.png';
-import Management from '../assets/images/Advantages/Management.png';
-import Favorite from '../assets/images/Advantages/Favorite.png';
+import Communicative from "../assets/images/Advantages/Communicative.png";
+import Collaborative from "../assets/images/Advantages/Collaborative.png";
+import Management from "../assets/images/Advantages/Management.png";
+import Favorite from "../assets/images/Advantages/Favorite.png";
 
 // Testimonials
-import Sasha from '../assets/images/Testimonials/Sasha.jpg';
-import Reiner from '../assets/images/Testimonials/Reiner.jpg';
-import Kruger from '../assets/images/Testimonials/Kruger.jpg';
+import Sasha from "../assets/images/Testimonials/Sasha.jpg";
+import Reiner from "../assets/images/Testimonials/Reiner.jpg";
+import Kruger from "../assets/images/Testimonials/Kruger.jpg";
 
 // TeamMembers
-import CEO from '../assets/images/TeamMembers/profile.jpg';
-import HRD from '../assets/images/TeamMembers/HRD.jpg';
-import Finance from '../assets/images/TeamMembers/Finance.jpg';
-import ProjectManager from '../assets/images/TeamMembers/Project-manager.jpg';
+import CEO from "../assets/images/TeamMembers/profile.jpg";
+import HRD from "../assets/images/TeamMembers/HRD.jpg";
+import Finance from "../assets/images/TeamMembers/Finance.jpg";
+import ProjectManager from "../assets/images/TeamMembers/Project-manager.jpg";
 // import Frontend1 from '../assets/images/TeamMembers/Frontend1.jpg';
 // import Frontend2 from '../assets/images/TeamMembers/Frontend2.jpg';
 // import Backend1 from '../assets/images/TeamMembers/Backend1.jpg';
@@ -40,68 +40,58 @@ import ProjectManager from '../assets/images/TeamMembers/Project-manager.jpg';
 
 export const Services = [
   {
-    title: 'Custom Mobile Apps',
+    title: "Custom Mobile Apps",
     imageUrl: Mobile,
-    animation: 'left',
+    animation: "left",
+    text: "We design and develop high-performance mobile applications tailored to your business needs. From concept to deployment, our apps deliver seamless user experiences, robust functionality, and scalable performance for both iOS and Android.",
   },
   {
-    title: 'Website Development',
+    title: "Website Development",
     imageUrl: Web,
-    animation: 'up',
+    animation: "up",
+    text: "Our expert team builds modern, responsive, and secure websites that reflect your brand and drive conversions. Whether it’s an e-commerce store, corporate site, or a custom web platform, we create solutions that work flawlessly across all devices.",
   },
   {
-    title: 'Social Media Ads',
+    title: "Social Media Ads",
     imageUrl: UIUX,
-    animation: 'right',
+    animation: "right",
+    text: "We craft impactful, data-driven ad campaigns to maximize your reach and engagement on platforms like Instagram, Facebook, and LinkedIn. From creative design to performance optimization, we help you get the best ROI from your social presence.",
   },
 ];
 
 export const Portfolios = [
   {
-    id: 'virtual-try-on',
-    title: 'Virtual Try-On (AR)',
+    id: "virtual-try-on",
+    title: "Virtual Try-On (AR)",
     imageUrl: Aura,
-    type: 'AR Experience',
-    responsibility: [
-      'AR Development',
-      'Computer Vision',
-      'AI Integration',
-    ],
-    credit: '/virtual-try-on',
+    type: "AR Experience",
+    responsibility: ["AR Development", "Computer Vision", "AI Integration"],
+    credit: "/virtual-try-on",
   },
   {
-    id: 'snapchat-lens',
-    title: 'Snapchat Lens Creator',
+    id: "snapchat-lens",
+    title: "Snapchat Lens Creator",
     imageUrl: Stream,
-    type: 'AR Filter',
-    responsibility: [
-      'Lens Development',
-      'Creative Design',
-    ],
-    credit: '/snapchat-lens',
+    type: "AR Filter",
+    responsibility: ["Lens Development", "Creative Design"],
+    credit: "/snapchat-lens",
   },
   {
-    id: 'ecommerce-app',
-    title: 'E-Commerce Mobile App',
+    id: "ecommerce-app",
+    title: "E-Commerce Mobile App",
     imageUrl: Freelance,
-    type: 'Mobile App',
-    responsibility: [
-      'Mobile Development',
-      'Payment Integration',
-    ],
-    credit: '/ecommerce-app',
+    type: "Mobile App",
+    responsibility: ["Mobile Development", "Payment Integration"],
+    credit: "/ecommerce-app",
   },
 
   {
-    id: 'brand-website',
-    title: 'Brand Website & Social Ads',
+    id: "brand-website",
+    title: "Brand Website & Social Ads",
     imageUrl: Surtido,
-    type: 'Website + Marketing',
-    responsibility: [
-      'Web Development',
-      'Facebook Ads Campaign',
-    ],
-    credit: '/brand-website',
+    type: "Website + Marketing",
+    responsibility: ["Web Development", "Facebook Ads Campaign"],
+    credit: "/brand-website",
   },
   // {
   //   id: 'asd1293ulskmnb5',
@@ -125,74 +115,83 @@ export const Portfolios = [
   //   ],
   //   credit: 'https://dribbble.com/shots/15197890-Courses-Management-and-Promoting-Web-App',
   // },
-
 ];
 
 export const Advantages = [
-  [{
-    title: 'Communicative',
-    description: 'We communicate our project ideas and progress to make it clear.',
-    imageUrl: Communicative,
-  },
-  {
-    title: 'Management',
-    description: 'We manage our project properly to make our project done well.',
-    imageUrl: Management,
-  }],
-  [{
-    title: 'Collaborative​',
-    description: 'Our team are very collaborative to make our project done well.',
-    imageUrl: Collaborative,
-  },
-  {
-    title: 'Favorite',
-    description: "We've did so many project and all of our client love it.",
-    imageUrl: Favorite,
-  }],
+  [
+    {
+      title: "Communicative",
+      description:
+        "We maintain transparent and consistent communication, ensuring you’re informed at every stage of the project.",
+      imageUrl: Communicative,
+    },
+    {
+      title: "Efficient Project Management",
+      description:
+        "WWe follow structured processes and agile methodologies to keep projects on track, within budget, and at the highest quality.",
+      imageUrl: Management,
+    },
+  ],
+  [
+    {
+      title: "Collaborative​",
+      description:
+        "OWe work closely with our clients, blending your vision with our expertise to deliver outstanding results.",
+      imageUrl: Collaborative,
+    },
+    {
+      title: "Trusted & Recommended",
+      description:
+        "Our proven track record and satisfied clients speak for themselves — we deliver solutions that people love.",
+      imageUrl: Favorite,
+    },
+  ],
 ];
 export const Testimonials = [
   {
     id: 1,
-    name: 'Sasha Rose',
-    company: 'Owner, Surveyor Corps',
-    testimoni: 'Thanks for WareTech, you guys are the best! Keep up the great work!',
+    name: "Sasha Rose",
+    company: "Owner, Surveyor Corps",
+    testimoni:
+      "Thanks for WareTech, you guys are the best! Keep up the great work!",
     imageUrl: Sasha,
   },
   {
     id: 2,
-    name: 'Kruger Khan',
-    company: 'Director, Shultan Oil',
-    testimoni: 'I just wanted to let you know that it’s been great working with WareTech.',
+    name: "Kruger Khan",
+    company: "Director, Shultan Oil",
+    testimoni:
+      "I just wanted to let you know that it’s been great working with WareTech.",
     imageUrl: Kruger,
   },
   {
     id: 3,
-    name: 'Reiner John',
-    company: 'CEO, Marley CO',
-    testimoni: 'WareTech is so great. Thank you so much for a job well done.',
+    name: "Reiner John",
+    company: "CEO, Marley CO",
+    testimoni: "WareTech is so great. Thank you so much for a job well done.",
     imageUrl: Reiner,
   },
 ];
 
 export const TeamMembers = [
   {
-    name: 'Mohan Mamidala',
-    position: 'Software Devloper',
+    name: "Mohan Mamidala",
+    position: "Software Devloper",
     imageUrl: CEO,
   },
   {
-    name: 'Mohit Dontula',
-    position: 'HRD',
+    name: "Mohit Dontula",
+    position: "HRD",
     imageUrl: HRD,
   },
   {
-    name: 'Granger Watterson',
-    position: 'UI UX Designer',
+    name: "Granger Watterson",
+    position: "UI UX Designer",
     imageUrl: Finance,
   },
   {
-    name: 'Tom Jimmy',
-    position: 'Backend Developer',
+    name: "Tom Jimmy",
+    position: "Backend Developer",
     imageUrl: ProjectManager,
   },
   // {

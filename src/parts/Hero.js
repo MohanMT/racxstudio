@@ -11,7 +11,7 @@ import BuildWebsite from "../assets/images/hero/BuildWebsite.png";
 
 export default function Hero() {
   return (
-    <section className="hero min-h-screen flex items-center">
+    <section className="hero flex items-center">
       <div className="w-full lg:w-1/2 xl:pl-12 sm:pr-2 flex flex-col justify-center">
         <h1 className="text-5xl sm:text-6xl text-primary font-bold leading-tight mb-5">
           Custom Apps & Digital Solutions <br />
@@ -31,7 +31,7 @@ export default function Hero() {
           <Button
             href="/project"
             type="link"
-            className="flex w-71 h-18 items-center px-14 py-5 text-white text-xl bg-accent rounded-lg shadow-2xl hover:bg-primary transition duration-200"
+            className="flex w-1/2 h-18 items-center px-14 py-5 text-white text-xl bg-accent rounded-lg shadow-2xl hover:bg-primary transition duration-200"
           >
             Start Your Project
             <svg
