@@ -33,17 +33,22 @@ export default function Service({ data }) {
               delay={500 * index}
               triggerOnce
             >
-              <div>
-                <div className="bg-background group rounded-2xl shadow-2xl border border-accent/20 transform transition duration-500 hover:scale-105">
+              <div className="bg-background group rounded-2xl shadow-2xl border border-accent/20 transform transition duration-500 hover:scale-105 overflow-hidden">
+                <div className="relative overflow-hidden">
                   <img
                     src={item.imageUrl}
                     alt="Service"
-                    className="w-full rounded-t-2xl"
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <h2 className="text-primary text-center text-xl py-7 rounded-b-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6">
+                  <h2 className="text-primary text-center text-xl font-semibold mb-4">
                     {item.title}
                   </h2>
-                  <span className="text-primary text-center text-sm px-7 py-7 rounded-b-2xl">{item.text}</span>
+                  <p className="text-text-dark text-center text-sm leading-relaxed">
+                    {item.text}
+                  </p>
                 </div>
               </div>
             </Fade>
