@@ -25,7 +25,7 @@ export default function SnapLensDetail() {
       'Photoshop',
       'After Effects',
     ],
-    imageUrl: '/assets/images/snaplens-demo.jpg',
+    imageUrl: '/assets/images/lenscreator.jpg',
   };
 
   return (

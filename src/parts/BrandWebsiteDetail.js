@@ -33,7 +33,7 @@ export default function BrandWebsiteDetail() {
       'Google Analytics',
       'Photoshop',
     ],
-    imageUrl: '/assets/images/brand-website-demo.jpg',
+    imageUrl: '/assets/images/website.jpg',
   };
 
   return (

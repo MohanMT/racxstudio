@@ -27,7 +27,7 @@ export default function EcommerceAppDetail() {
       'Firebase',
       'Redux',
     ],
-    imageUrl: '/assets/images/ecommerce-app-demo.jpg',
+    imageUrl: '/assets/images/ecom.png',
   };
 
   return (
