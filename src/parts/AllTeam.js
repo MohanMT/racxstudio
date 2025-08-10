@@ -1,30 +1,84 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 
-import Fade from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
-export default function AllTeam({ data }) {
+import CEO from 'assets/images/TeamMembers/profile.jpg';
+import Frontend1 from 'assets/images/TeamMembers/mohit.jpg';
+// import Frontend2 from 'assets/images/TeamMembers/Frontend2.jpg';
+import Backend1 from 'assets/images/TeamMembers/deep.jpg';
+// import Backend2 from 'assets/images/TeamMembers/Backend2.jpg';
+// import Mobile1 from 'assets/images/TeamMembers/Mobile1.jpg';
+// import Mobile2 from 'assets/images/TeamMembers/Mobile2.jpg';
+import UIUX1 from 'assets/images/TeamMembers/soham.jpg';
+
+const teamData = [
+  {
+    name: 'Mohan Mamidala',
+    position: 'Software Engineer',
+    imageUrl: CEO,
+  },
+  {
+    name: 'Mohit Dontula',
+    position: 'HRD',
+    imageUrl: Frontend1,
+  },
+  {
+    name: 'Deep Karmur',
+    position: 'Backend Developer',
+    imageUrl: Backend1,
+  },
+  {
+    name: 'Soham More',
+    position: 'FullStack Developer',
+    imageUrl: UIUX1,
+  },
+  // {
+  //   name: 'Alex Rodriguez',
+  //   position: 'Mobile Developer',
+  //   imageUrl: Mobile1,
+  // },
+  // {
+  //   name: 'Lisa Wang',
+  //   position: 'Frontend Developer',
+  //   imageUrl: Frontend2,
+  // },
+  // {
+  //   name: 'Tom Wilson',
+  //   position: 'Backend Developer',
+  //   imageUrl: Backend2,
+  // },
+  // {
+  //   name: 'Jessica Brown',
+  //   position: 'Mobile Developer',
+  //   imageUrl: Mobile2,
+  // },
+];
+
+export default function AllTeam() {
   return (
-    <section className="container mx-0 sm:mx-auto">
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-32 sm:gap-14 lg:gap-10 mx-16 justify-items-center">
-        {
-          data.map((item, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <Fade bottom triggerOnce delay={200 * index} key={index}>
-              <div>
-                <div className="flex flex-col w-44 h-60 sm:w-56 sm:h-72 rounded-xl shadow-xl border border-light-theme-purple justify-center transform transition duration-500 hover:scale-105">
-                  <div className="flex justify-center xl:mb-5">
-                    <img src={item.imageUrl} alt="Team Member" className="flex w-32 h-32 rounded-full" />
-                  </div>
-                  <h2 className="text-theme-blue text-center text-xl">{item.name}</h2>
-                  <p className="font-light text-gray-400 text-center mb-3">{item.position}</p>
-                </div>
+    <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        {teamData.map((item, index) => (
+          <Fade key={item.name} direction="up" triggerOnce delay={index * 100}>
+            <div className="bg-background rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="mb-4">
+                <img 
+                  src={item.imageUrl} 
+                  alt={item.name}
+                  className="w-24 h-24 lg:w-32 lg:h-32 rounded-full mx-auto object-cover shadow-md"
+                />
               </div>
-            </Fade>
-          ))
-        }
+              <h3 className="text-lg lg:text-xl font-semibold text-primary mb-2">
+                {item.name}
+              </h3>
+              <p className="text-sm lg:text-base text-text-light">
+                {item.position}
+              </p>
+            </div>
+          </Fade>
+        ))}
       </div>
     </section>
   );

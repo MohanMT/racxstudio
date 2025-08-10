@@ -1,10 +1,5 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/extensions */
-
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
 import Button from "../elements/Button";
 import BrandIcon from "./BrandIcon";
 
@@ -14,55 +9,10 @@ export default function Header() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMenuOpen(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  // Close menu on escape key
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === "Escape" && isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    if (isMenuOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleEscape);
-      document.body.style.overflow = "unset";
-    };
-  }, [isMenuOpen]);
-
-  const isActive = (path) => location.pathname === path;
 
   const menuItems = [
     { path: "/", label: "Home", icon: "🏠" },
@@ -72,109 +22,87 @@ export default function Header() {
     { path: "/contact", label: "Contact", icon: "📧" },
   ];
 
+  const getButtonClass = (path) => {
+    if (location.pathname === path) {
+      return "text-accent bg-accent/10";
+    }
+    if (scrolled) {
+      return "text-white hover:text-accent";
+    }
+    return "text-primary hover:text-accent";
+  };
+
   return (
     <>
-      <header
-        className={`fixed rounded-full top-2 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "nav-glassmorphism shadow-2xl" : "bg-transparent"
-        }`}
-      >
-        <div className="container mx-auto px-4 sm:px-5 p-2">
-          <div className=" flex items-center justify-between">
-            <div className="animate-pulse-custom">
-              <BrandIcon scrolled={scrolled} />
+      <header className={`fixed top-0 w-full z-50 ${scrolled ? "nav-glassmorphism" : "bg-transparent"}`}>
+        <div className="flex items-center justify-between px-4 py-4 max-w-7xl mx-auto">
+          
+          <BrandIcon scrolled={scrolled} />
+
+          <nav className="hidden lg:flex space-x-6">
+            {menuItems.map((item) => (
+              <Button
+                key={item.path}
+                type="link"
+                href={item.path}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-full transition ${getButtonClass(item.path)}`}
+              >
+                <span>{item.icon}</span>
+                <span>{item.label}</span>
+              </Button>
+            ))}
+          </nav>
+
+          <button
+            type="button"
+            className="lg:hidden p-2 rounded-lg nav-glassmorphism"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <div className="w-6 h-6 flex flex-col justify-center space-y-1">
+              <span className={`block h-0.5 w-6 bg-white transition ${isMenuOpen ? "rotate-45 translate-y-1.5" : ""}`} />
+              <span className={`block h-0.5 w-6 bg-white transition ${isMenuOpen ? "opacity-0" : ""}`} />
+              <span className={`block h-0.5 w-6 bg-white transition ${isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`} />
             </div>
+          </button>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {menuItems.map((item) => {
-                let buttonClasses = "";
-                if (isActive(item.path)) {
-                  buttonClasses = "text-accent bg-accent/10 shadow-lg";
-                } else if (scrolled) {
-                  buttonClasses = "text-white hover:text-accent hover:bg-accent/5";
-                } else {
-                  buttonClasses = "text-primary hover:text-accent hover:bg-accent/5";
-                }
-
-                return (
-                  <div key={item.path} className="nav-item">
-                    <Button
-                      type="link"
-                      href={item.path}
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${buttonClasses}`}
-                    >
-                      <span className="text-lg">{item.icon}</span>
-                      <span
-                        className={`font-medium ${
-                          scrolled ? "text-white" : "text-primary"
-                        }`}
-                      >
-                        {item.label}
-                      </span>
-                    </Button>
-                  </div>
-                );
-              })}
-            </nav>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              type="button"
-              className={`lg:hidden hamburger ${
-                isMenuOpen ? "open" : ""
-              } p-2 rounded-lg nav-glassmorphism flex-shrink-0`}
-              onClick={toggleMenu}
-            >
-              <span />
-              <span />
-              <span />
-            </button>
-          </div>
         </div>
       </header>
 
-      {/* Mobile Navigation Drawer */}
-      <div
-        className={`mobile-menu ${
-          isMenuOpen ? "open" : ""
-        } fixed top-0 right-0 h-full w-80 z-50 lg:hidden`}
-      >
-        <div className="flex flex-col h-full px-8">
-          {menuItems.map((item, index) => (
-            <div
-              key={item.path}
-              className="nav-item mb-6"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 lg:hidden">
+          <button
+            type="button"
+            className="fixed inset-0 bg-black/50"
+            onClick={() => setIsMenuOpen(false)}
+            onKeyDown={(e) => e.key === 'Escape' && setIsMenuOpen(false)}
+            aria-label="Close menu"
+          />
+          <div className="fixed right-0 top-0 h-full w-80 bg-primary p-6">
+            <div className="flex justify-end mb-8">
+              <button
+                type="button"
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 rounded-full bg-accent/20 text-white"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            {menuItems.map((item) => (
               <Button
+                key={item.path}
                 type="link"
                 href={item.path}
-                onClick={closeMenu}
-                className={`flex items-center space-x-4 w-full px-6 py-4 rounded-xl transition-all duration-300 ${
-                  isActive(item.path)
-                    ? "text-accent bg-accent/20 shadow-lg"
-                    : "text-white hover:text-accent hover:bg-accent/10"
-                }`}
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center space-x-4 w-full p-4 mb-4 rounded-xl text-white hover:bg-accent/10"
               >
                 <span className="text-2xl">{item.icon}</span>
-                <span className="text-xl font-semibold text-white">
-                  {item.label}
-                </span>
+                <span className="text-xl">{item.label}</span>
               </Button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <button
-          type="button"
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden cursor-pointer"
-          onClick={closeMenu}
-          aria-label="Close menu"
-        />
       )}
     </>
   );

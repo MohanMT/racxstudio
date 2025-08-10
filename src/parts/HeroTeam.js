@@ -9,24 +9,32 @@ import Team from 'assets/images/hero/team.png';
 
 export default function HeroTeam() {
   return (
-    <section className="hero mt-20 sm:items-center lg:items-start sm:flex-row">
+    <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        
+        <div className="order-2 lg:order-1">
+          <Fade direction="up" triggerOnce>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-theme-blue font-bold leading-tight mb-6">
+              Our Team
+            </h1>
+          </Fade>
+          <Fade direction="up" delay={300} triggerOnce>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed">
+              Our team is full of passionate people and ready to make your dream software come true.
+            </p>
+          </Fade>
+        </div>
 
-      <div className="w-full sm:w-1/2 flex flex-col px-5 mb-8 sm:mb-0 sm:px-12 sm:mt-6 lg:mt-6 xl:mt-20">
-        <Fade direction="up" triggerOnce>
-          <h1 className="text-4xl sm:text-6xl text-theme-blue font-bold leading-tight mb-5">
-            Our Team
-          </h1>
-        </Fade>
-        <Fade direction="up" delay={500} triggerOnce>
-          <p className="font-light text-lg sm:text-xl text-gray-400 leading-relaxed">
-            Our team is full of passionate people and ready to make your dream software come true.
-          </p>
-        </Fade>
-      </div>
-      <div className="flex pt-5 w-full justify-center items-center order-first md:w-full lg:order-last lg:w-1/2">
-        <Fade direction="top-right" triggerOnce delay={300}>
-          <img src={Team} alt="Hero" />
-        </Fade>
+        <div className="order-1 lg:order-2 flex justify-center">
+          <Fade direction="right" triggerOnce delay={200}>
+            <img 
+              src={Team} 
+              alt="Our Team" 
+              className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-lg"
+            />
+          </Fade>
+        </div>
+
       </div>
     </section>
   );
