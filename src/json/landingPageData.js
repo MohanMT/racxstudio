@@ -128,7 +128,7 @@ export const Advantages = [
     {
       title: "Efficient Project Management",
       description:
-        "WWe follow structured processes and agile methodologies to keep projects on track, within budget, and at the highest quality.",
+        "We follow structured processes and agile methodologies to keep projects on track, within budget, and at the highest quality.",
       imageUrl: Management,
     },
   ],
@@ -136,7 +136,7 @@ export const Advantages = [
     {
       title: "Collaborative​",
       description:
-        "OWe work closely with our clients, blending your vision with our expertise to deliver outstanding results.",
+        "We work closely with our clients, blending your vision with our expertise to deliver outstanding results.",
       imageUrl: Collaborative,
     },
     {
