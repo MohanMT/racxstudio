@@ -101,7 +101,7 @@ export default function VirtualTryOnDetail() {
         {/* Section: Project Title & Description */}
         <Fade direction="up" triggerOnce>
           <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary font-bold mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary font-bold mb-6 animate-float">
               Virtual Try-On (Augmented Reality)
             </h1>
 

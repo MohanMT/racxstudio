@@ -14,7 +14,7 @@ export default function Portfolio({ data }) {
   return (
     <section className="container mx-auto px-5 py-20 flex flex-col items-center">
       <Fade direction="right" triggerOnce>
-        <h1 className="text-5xl text-primary text-center font-bold">Our Projects</h1>
+        <h1 className="text-5xl text-primary text-center font-bold animate-float-reverse">Our Projects</h1>
       </Fade>
       <Fade direction="left" triggerOnce>
         <p className="font-light text-lg text-text-light text-center mb-12">
@@ -30,7 +30,7 @@ export default function Portfolio({ data }) {
             // eslint-disable-next-line react/no-array-index-key
             <Fade direction="up" triggerOnce bottom delay={500 * index} key={index}>
               <Button type="link" href={['virtual-try-on', 'snapchat-lens', 'ecommerce-app', 'brand-website'].includes(item.id) ? `/${item.id}` : `/project/${item.id}`}>
-                <div className="group rounded-2xl shadow-xl w-full max-w-sm transform transition duration-500 hover:scale-105 portofolio-card">
+                <div className="group rounded-2xl shadow-xl w-full max-w-sm transform transition duration-500 hover:scale-105 portofolio-card animate-glow hover:animate-shake">
                   <div className="relative">
                     <img src={item.imageUrl} alt="Portfolio" className="rounded-t-2xl z-0" />
                     <div className="absolute flex w-full h-full top-0 opacity-0 bg-black justify-center rounded-t-2xl rounded-b img-hover">

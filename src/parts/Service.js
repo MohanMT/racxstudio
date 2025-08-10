@@ -12,7 +12,7 @@ export default function Service({ data }) {
     <div className="bg-text-light/10 py-20">
       <div className="container mx-auto px-5">
         <Fade direction="right" triggerOnce>
-          <h1 className="text-5xl text-primary text-center font-bold">
+          <h1 className="text-5xl text-primary text-center font-bold animate-pulse-custom">
             Our Services
           </h1>
         </Fade>
@@ -33,7 +33,7 @@ export default function Service({ data }) {
               delay={500 * index}
               triggerOnce
             >
-              <div className="bg-background group rounded-2xl shadow-2xl border border-accent/20 transform transition duration-500 hover:scale-105 overflow-hidden">
+              <div className="bg-background group rounded-2xl shadow-2xl border border-accent/20 transform transition duration-500 hover:scale-105 overflow-hidden animate-glow hover:animate-bounce-custom">
                 <div className="relative overflow-hidden">
                   <img
                     src={item.imageUrl}

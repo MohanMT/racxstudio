@@ -22,7 +22,7 @@ export default function Testimonial({ data }) {
   return (
     <section className="w-full px-5 pt-10">
       <Fade direction="up">
-        <h1 className="text-3xl md:text-4xl text-primary text-center font-bold">
+        <h1 className="text-3xl md:text-4xl text-primary text-center font-bold animate-float">
           Testimonials
         </h1>
       </Fade>
@@ -42,12 +42,12 @@ export default function Testimonial({ data }) {
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-background rounded-2xl shadow-xl border border-accent/20 p-6 max-w-3xl mx-auto my-4">
+            <div className="bg-background rounded-2xl shadow-xl border border-accent/20 p-6 max-w-3xl mx-auto my-4 animate-glow hover:animate-pulse-custom">
               <div className="flex items-center mb-5">
                 <img
                   src={item.imageUrl}
                   alt="Testimoni"
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="w-16 h-16 rounded-full object-cover animate-grow"
                 />
                 <div className="flex-col pl-4">
                   <h2 className="text-primary text-lg md:text-xl">{item.name}</h2>
