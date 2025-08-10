@@ -43,7 +43,7 @@ section {
 }
 
 .hero {
-  @apply container px-5 flex flex-col mx-auto;
+  @apply container px-5 mt-12 flex flex-col mx-auto;
 }
 
 .portfolio-card:hover .img-hover {

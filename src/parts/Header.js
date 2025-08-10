@@ -138,9 +138,9 @@ export default function Header() {
       <div
         className={`mobile-menu ${
           isMenuOpen ? "open" : ""
-        } fixed top-0 mt-24 right-0 h-full w-80 z-50 lg:hidden`}
+        } fixed top-0 right-0 h-full w-80 z-50 lg:hidden`}
       >
-        <div className="flex flex-col h-full pt-20 px-8">
+        <div className="flex flex-col h-full px-8">
           {menuItems.map((item, index) => (
             <div
               key={item.path}
