@@ -75,11 +75,11 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed rounded-full top-2 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled ? "nav-glassmorphism shadow-2xl" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-5 py-4">
+        <div className="container mx-auto px-4 sm:px-5 p-2">
           <div className=" flex items-center justify-between">
             <div className="animate-pulse-custom">
               <BrandIcon scrolled={scrolled} />

@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 
 import Button from "../elements/Button";
 
-import BuildWebsite from "../assets/images/hero/team.png";
+import BuildWebsite from "../assets/images/hero/it1.jpg";
 
 export default function Hero() {
   return (
@@ -53,9 +53,9 @@ export default function Hero() {
       </div>
       <div className="flex w-full justify-center items-center order-first lg:order-last lg:w-1/2 py-8 lg:py-0">
         <Fade direction="up" triggerOnce>
-          <img className="" src={BuildWebsite} alt="Build Website" />
+          <img className="rounded-2xl " src={BuildWebsite} alt="Build Website" />
         </Fade>
       </div>
     </section>
-  );
+  ); 
 }
