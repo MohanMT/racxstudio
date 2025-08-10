@@ -79,10 +79,10 @@ export default function Header() {
           scrolled ? "nav-glassmorphism shadow-2xl" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto px-5 py-4">
-          <div className="flex items-center justify-between">
+        <div className="container mx-auto px-5 py-4">
+          <div className=" flex items-center justify-between">
             <div className="animate-pulse-custom">
-              <BrandIcon />
+              <BrandIcon scrolled={scrolled} />
             </div>
 
             {/* Desktop Navigation */}
