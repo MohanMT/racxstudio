@@ -429,40 +429,49 @@ html::-webkit-scrollbar {
   width: 0px;
 }
 
-/* Custom cursor styles */
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: transform 0.1s ease;
+/* Custom cursor styles - only for desktop */
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+  }
+
+  .circle {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 107, 0, 0.6);
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.1s ease;
+    transform-origin: center;
+  }
+
+  /* Hide default cursor */
+  * {
+    cursor: none !important;
+  }
+
+  /* Smooth cursor movement */
+  @media (prefers-reduced-motion: no-preference) {
+    .cursor, .circle {
+      transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  }
 }
 
-.circle {
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(255, 107, 0, 0.6);
-  pointer-events: none;
-  z-index: 9998;
-  transition: all 0.1s ease;
-  transform-origin: center;
-}
-
-/* Hide default cursor */
-* {
-  cursor: none !important;
-}
-
-/* Smooth cursor movement */
-@media (prefers-reduced-motion: no-preference) {
-  .cursor, .circle {
-    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* Show default cursor on mobile/tablet */
+@media (max-width: 1024px), (hover: none), (pointer: coarse) {
+  * {
+    cursor: auto !important;
   }
 }
 
