@@ -131,9 +131,9 @@ export default function Header() {
             </li>
             <li className="py-2 bg-background">
               <Button
-                className={`${path === '/contact' ? 'active-link' : ''} font-medium px-10 no-underline hover:underline`}
+                className={`${path === '/discuss-project' ? 'active-link' : ''} font-medium px-10 no-underline hover:underline`}
                 type="link"
-                href="/contact"
+                href="/discuss-project"
               >
                 Contact Us
               </Button>

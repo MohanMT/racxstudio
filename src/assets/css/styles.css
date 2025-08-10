@@ -12,7 +12,7 @@ section {
 }
 
 .header {
-  @apply flex flex-col py-4 mb-4 justify-between;
+  @apply flex flex-col mb-4 justify-between;
 }
 
 .hero {

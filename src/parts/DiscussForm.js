@@ -55,11 +55,11 @@ export const DiscussForm = (actions) => {
     <section className="flex flex-col container mx-auto mt-10 justify-center">
 
       <Fade direction="down" triggerOnce>
-        <h1 className="text-5xl text-theme-blue text-center font-bold">Lets Discuss</h1>
+        <h1 className="text-5xl text-primary text-center font-bold">Lets Discuss</h1>
       </Fade>
 
       <Fade direction="up" triggerOnce>
-        <p className="font-light text-lg text-gray-400 text-center mb-12">
+        <p className="font-light text-lg text-text-dark text-center mb-12">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           Please fill out the form below to discuss your project and we'll get back to you in less than 24 hours.
         </p>
@@ -121,11 +121,11 @@ export const DiscussForm = (actions) => {
             />
           </div>
           <Button
-            className="text-xl mx-auto px-12 py-3 mt-5 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200 focus:outline-none"
+            className="text-xl mx-auto px-12 py-4 mt-8 bg-primary text-white rounded-full border-2 border-primary hover:bg-accent hover:border-accent transform transition duration-300 hover:scale-105 shadow-lg focus:outline-none"
             type="button"
             onClick={submitEmail}
           >
-            Submit
+            Submit Project
           </Button>
         </div>
       </Fade>
