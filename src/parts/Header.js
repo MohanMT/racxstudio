@@ -79,7 +79,7 @@ export default function Header() {
           scrolled ? "nav-glassmorphism shadow-2xl" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-5 py-4">
+        <div className="container mx-auto px-4 sm:px-5 py-4">
           <div className=" flex items-center justify-between">
             <div className="animate-pulse-custom">
               <BrandIcon scrolled={scrolled} />
@@ -123,7 +123,7 @@ export default function Header() {
               type="button"
               className={`lg:hidden hamburger ${
                 isMenuOpen ? "open" : ""
-              } p-2 rounded-lg nav-glassmorphism`}
+              } p-2 rounded-lg nav-glassmorphism flex-shrink-0`}
               onClick={toggleMenu}
             >
               <span />
@@ -138,7 +138,7 @@ export default function Header() {
       <div
         className={`mobile-menu ${
           isMenuOpen ? "open" : ""
-        } fixed top-0 right-0 h-full w-80 z-50 lg:hidden`}
+        } fixed top-0 mt-24 right-0 h-full w-80 z-50 lg:hidden`}
       >
         <div className="flex flex-col h-full pt-20 px-8">
           {menuItems.map((item, index) => (

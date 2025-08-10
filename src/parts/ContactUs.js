@@ -54,20 +54,22 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="container mx-auto px-5 py-20">
-      <Fade direction="up" triggerOnce>
-        <h1 className="text-5xl text-primary text-center font-bold mb-4">
-          Let&apos;s Create Something Amazing
-        </h1>
-        <p className="text-xl text-text-light text-center mb-12">
-          Ready to Transform Your Digital Presence?
-        </p>
-      </Fade>
+    <section className="container mx-auto px-4 sm:px-5 py-20">
+      <div className="text-center mb-16">
+        <Fade direction="up" triggerOnce>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary font-bold mb-4">
+            Let&apos;s Create Something Amazing
+          </h1>
+          <p className="text-lg sm:text-xl text-text-light">
+            Ready to Transform Your Digital Presence?
+          </p>
+        </Fade>
+      </div>
 
       <div className="max-w-6xl mx-auto">
         <Fade direction="up" delay={200} triggerOnce>
-          <div className="bg-background rounded-2xl shadow-xl p-8 mb-12">
-            <p className="text-lg text-text-dark text-center leading-relaxed">
+          <div className="bg-background rounded-2xl shadow-xl p-6 sm:p-8 mb-12 text-center">
+            <p className="text-base sm:text-lg text-text-dark leading-relaxed max-w-4xl mx-auto">
               Whether you need a custom mobile app, a stunning website, or targeted
               {' '}
               social media campaigns, we&apos;re here to bring your vision to life.
@@ -79,11 +81,11 @@ export default function ContactUs() {
           </div>
         </Fade>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Contact Information */}
           <Fade direction="left" delay={400} triggerOnce>
             <div className="space-y-8">
-              <div className="bg-background rounded-2xl shadow-xl p-8">
+              <div className="bg-background rounded-2xl shadow-xl p-6 sm:p-8">
                 <h3 className="text-2xl text-primary font-semibold mb-6">
                   Contact Information
                 </h3>
@@ -116,7 +118,7 @@ export default function ContactUs() {
                 </div>
               </div>
 
-              <div className="bg-primary text-background rounded-2xl shadow-xl p-8">
+              <div className="bg-primary text-background rounded-2xl shadow-xl p-6 sm:p-8">
                 <h3 className="text-2xl font-semibold mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <Button 
@@ -144,7 +146,7 @@ export default function ContactUs() {
 
           {/* Contact Form */}
           <Fade direction="right" delay={600} triggerOnce>
-            <div className="bg-background rounded-2xl shadow-xl p-8">
+            <div className="bg-background rounded-2xl shadow-xl p-6 sm:p-8">
               <h3 className="text-2xl text-primary font-semibold mb-6">
                 Get in Touch
               </h3>
