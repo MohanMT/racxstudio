@@ -20,6 +20,7 @@ import { ProjectDetailPage } from 'pages/ProjectDetailPage';
 import { DiscussProjectPage } from 'pages/DiscussProjectPage';
 
 import './assets/css/styles.css';
+import './cursor.js';
 
 function App() {
   return (

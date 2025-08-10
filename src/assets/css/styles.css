@@ -398,29 +398,72 @@ h6 {
   background: #6366f1;
 }
 
-/* Scrollbar styling for Chrome, Edge, Safari */
+/* Hide scrollbar completely */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 0px;
+  height: 0px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #0a2540; /* Navy Blue */
-  border-radius: 6px;
+  background: transparent;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #ff6b00; /* Orange hover */
-}
-
-/* Firefox support */
+/* Firefox support - hide scrollbar */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #0a2540 #f1f1f1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Ensure scrolling still works */
+html {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Custom cursor styles */
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.circle {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 107, 0, 0.6);
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.1s ease;
+  transform-origin: center;
+}
+
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Smooth cursor movement */
+@media (prefers-reduced-motion: no-preference) {
+  .cursor, .circle {
+    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
 }
 
 .discuss {
