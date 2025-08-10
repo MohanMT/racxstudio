@@ -97,7 +97,7 @@ export default function ContactUs() {
                     </div>
                     <div>
                       <p className="text-text-dark font-medium">Email</p>
-                      <p className="text-text-light">mohanmamidala2004@gmail.com</p>
+                      <p className="text-text-light">wartechsolutionz@gmail.com</p>
                     </div>
                   </div>
 
@@ -110,7 +110,7 @@ export default function ContactUs() {
                     </div>
                     <div>
                       <p className="text-text-dark font-medium">Address</p>
-                      <p className="text-text-light">Padmanagar, Bhiwandi, Thane</p>
+                      <p className="text-text-light">Near Kailsh Grain, Gaytri Nagar, Padmanagar, Bhiwandi, Thane</p>
                     </div>
                   </div>
                 </div>

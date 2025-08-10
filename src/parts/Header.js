@@ -17,13 +17,50 @@ export default function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMenuOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
 
   const isActive = (path) => location.pathname === path;
 
@@ -48,27 +85,40 @@ export default function Header() {
               <BrandIcon />
             </div>
 
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {menuItems.map((item) => (
-                <div key={item.path} className="nav-item">
-                  <Button
-                    type="link"
-                    href={item.path}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                      isActive(item.path)
-                        ? "text-accent bg-accent/10 shadow-lg"
-                        : "text-background hover:text-accent hover:bg-accent/5"
-                    }`}
-                  >
-                    <span className="text-lg animate-bounce-custom">
-                      {item.icon}
-                    </span>
-                    <span className="font-medium">{item.label}</span>
-                  </Button>
-                </div>
-              ))}
+              {menuItems.map((item) => {
+                let buttonClasses = "";
+                if (isActive(item.path)) {
+                  buttonClasses = "text-accent bg-accent/10 shadow-lg";
+                } else if (scrolled) {
+                  buttonClasses = "text-white hover:text-accent hover:bg-accent/5";
+                } else {
+                  buttonClasses = "text-primary hover:text-accent hover:bg-accent/5";
+                }
+
+                return (
+                  <div key={item.path} className="nav-item">
+                    <Button
+                      type="link"
+                      href={item.path}
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${buttonClasses}`}
+                    >
+                      <span className="text-lg">{item.icon}</span>
+                      <span
+                        className={`font-medium ${
+                          scrolled ? "text-white" : "text-primary"
+                        }`}
+                      >
+                        {item.label}
+                      </span>
+                    </Button>
+                  </div>
+                );
+              })}
             </nav>
 
+            {/* Mobile Menu Toggle */}
             <button
               type="button"
               className={`lg:hidden hamburger ${
@@ -84,10 +134,11 @@ export default function Header() {
         </div>
       </header>
 
+      {/* Mobile Navigation Drawer */}
       <div
         className={`mobile-menu ${
           isMenuOpen ? "open" : ""
-        } fixed top-0 right-0 h-full w-80 z-40 lg:hidden`}
+        } fixed top-0 right-0 h-full w-80 z-50 lg:hidden`}
       >
         <div className="flex flex-col h-full pt-20 px-8">
           {menuItems.map((item, index) => (
@@ -99,27 +150,29 @@ export default function Header() {
               <Button
                 type="link"
                 href={item.path}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
                 className={`flex items-center space-x-4 w-full px-6 py-4 rounded-xl transition-all duration-300 ${
                   isActive(item.path)
-                    ? "text-accent bg-accent/20 shadow-lg animate-glow"
-                    : "text-background hover:text-accent hover:bg-accent/10"
+                    ? "text-accent bg-accent/20 shadow-lg"
+                    : "text-white hover:text-accent hover:bg-accent/10"
                 }`}
               >
-                <span className="text-2xl animate-float">{item.icon}</span>
-                <span className="text-xl font-semibold">{item.label}</span>
+                <span className="text-2xl">{item.icon}</span>
+                <span className="text-xl font-semibold text-white">
+                  {item.label}
+                </span>
               </Button>
             </div>
           ))}
         </div>
       </div>
 
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <button
           type="button"
-          className="fixed inset-0 bg-black/50 z-30 lg:hidden cursor-pointer"
-          onClick={() => setIsMenuOpen(false)}
-          onKeyDown={(e) => e.key === "Escape" && setIsMenuOpen(false)}
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden cursor-pointer"
+          onClick={closeMenu}
           aria-label="Close menu"
         />
       )}
