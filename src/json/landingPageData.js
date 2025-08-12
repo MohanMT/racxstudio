@@ -20,9 +20,9 @@ import Management from "../assets/images/Advantages/Management.png";
 import Favorite from "../assets/images/Advantages/Favorite.png";
 
 // Testimonials
-import Sasha from "../assets/images/Testimonials/Sasha.jpg";
-import Reiner from "../assets/images/Testimonials/Reiner.jpg";
-import Kruger from "../assets/images/Testimonials/Kruger.jpg";
+import Sasha from "../assets/images/Testimonials/defaultfemale.png";
+import Reiner from "../assets/images/Testimonials/defaultmale.png";
+// import Kruger from "../assets/images/Testimonials/defaultmale.png";
 
 // TeamMembers
 import CEO from "../assets/images/TeamMembers/profile.jpg";
@@ -150,26 +150,35 @@ export const Advantages = [
 export const Testimonials = [
   {
     id: 1,
-    name: "Sasha Rose",
-    company: "Owner, Surveyor Corps",
+    name: "Aarav Sharma",
+    company: "Owner, TechBridge Solutions",
     testimoni:
-      "Thanks for WareTech, you guys are the best! Keep up the great work!",
-    imageUrl: Sasha,
+      "WarTech transformed our business operations with their innovative solutions. Highly professional and reliable team!",
+    imageUrl: Reiner,
   },
   {
     id: 2,
-    name: "Kruger Khan",
-    company: "Director, Shultan Oil",
+    name: "Priya Nair",
+    company: "Head, LogiSmart India",
     testimoni:
-      "I just wanted to let you know that it’s been great working with WareTech.",
-    imageUrl: Kruger,
+      "Working with WarTech has been a game-changer. Their expertise and dedication are unmatched.",
+    imageUrl: Sasha,
   },
   {
     id: 3,
-    name: "Reiner John",
-    company: "CEO, Marley CO",
-    testimoni: "WareTech is so great. Thank you so much for a job well done.",
+    name: "Rohit Mehta",
+    company: "CEO, SmartTrack Logistics",
+    testimoni:
+      "WaWarTech delivered beyond our expectations. Their technology solutions boosted our efficiency drastically.",
     imageUrl: Reiner,
+  },
+  {
+    id: 4,
+    name: "Neha Kapoor",
+    company: "Owner, VisionWare Pvt. Ltd",
+    testimoni:
+      "WarTech’s commitment to quality and timely delivery impressed us the most. Truly commendable work",
+    imageUrl: Sasha,
   },
 ];
 
