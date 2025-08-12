@@ -15,7 +15,7 @@ export default function BrandIcon({ scrolled }) {
       href="/"
     >
       <p className={`ml-12 text-4xl font-medium ${scrolled ? 'text-white' : 'text-secondary'}`}>
-        Ware
+        War
         <span className="text-accent">Tech</span>
       </p>
     </Button>
